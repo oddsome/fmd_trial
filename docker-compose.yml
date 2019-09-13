@@ -1,0 +1,14 @@
+fetcher:
+  build: fetcher/
+  links:
+    - db
+
+server:
+  build: server/
+  ports:
+    - "8000:5000"
+  links:
+    - db
+
+db:
+  image: mongo:4.2.0
